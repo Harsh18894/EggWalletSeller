@@ -34,10 +34,7 @@
             android:name=".activities.GCMActivity"
             android:noHistory="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <receiver android:name=".util.SmsListener">
             <intent-filter>
@@ -63,7 +60,10 @@
             android:name=".activities.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/DashboardTheme">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -116,6 +116,17 @@
         <activity
             android:name=".activities.QRCodeDisplayActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SearchShopsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
 
     </application>
 

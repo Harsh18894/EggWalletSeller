@@ -65,7 +65,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     private static TextView txtAmount;
     private static final int SELECT_PHOTO = 100;
     private final int SCAN_QR = 50;
-    private SellerDTO sellerDTO;
+    //private SellerDTO sellerDTO;
     private final int REQUEST_MONEY = 20;
 
     @Override
@@ -73,7 +73,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         rootView = inflater.inflate(R.layout.fragment_dashboard, container, false);
         LayoutInflater layoutInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         headerView = (LinearLayout) layoutInflater.inflate(R.layout.fragment_dashboard_header, null);
-        sellerDTO = SessionDTODFactory.getSellerDTO(getActivity());
+        //sellerDTO = SessionDTODFactory.getSellerDTO(getActivity());
         ButterKnife.inject(this, rootView);
         populate();
 
@@ -83,8 +83,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onResume() {
         super.onResume();
-        sellerDTO = SessionDTODFactory.getSellerDTO(getActivity());
-        txtAmount.setText(getActivity().getResources().getString(R.string.Rs) + "  " + sellerDTO.getWallet().getBalance());
+        //sellerDTO = SessionDTODFactory.getSellerDTO(getActivity());
+        //txtAmount.setText(getActivity().getResources().getString(R.string.Rs) + "  " + sellerDTO.getWallet().getBalance());
     }
 
     private void populate() {
@@ -125,7 +125,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         listDashboard.addHeaderView(headerView);
 
         txtAmount = (TextView) headerView.findViewById(R.id.txtAmount);
-        txtAmount.setText(getActivity().getResources().getString(R.string.Rs) + "  " + sellerDTO.getWallet().getBalance());
+       // txtAmount.setText(getActivity().getResources().getString(R.string.Rs) + "  " + sellerDTO.getWallet().getBalance());
 
     }
 

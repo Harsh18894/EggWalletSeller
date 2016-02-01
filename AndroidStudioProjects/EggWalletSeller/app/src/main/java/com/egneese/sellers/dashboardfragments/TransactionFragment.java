@@ -63,7 +63,7 @@ public class TransactionFragment extends Fragment implements AbsListView.OnScrol
         rootView = inflater.inflate(R.layout.fragment_transaction, container, false);
         ButterKnife.inject(this, rootView);
      //   setRetainInstance(true);
-        populate();
+       // populate();
         return rootView;
     }
 
